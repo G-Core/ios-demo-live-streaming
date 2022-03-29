@@ -43,4 +43,8 @@ extension UIImage {
     static var flipIcon: UIImage? {
         UIImage(named: "flip.icon")
     }
+    
+    static var blackImage: UIImage? {
+        UIImage(named: "blackImage")
+    }
 }

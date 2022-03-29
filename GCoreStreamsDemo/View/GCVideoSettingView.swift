@@ -15,7 +15,7 @@ final class GCVideoSettingView: UIView {
     var delegate: GCVideoSettingViewDelegate?
     
     private let tableView = UITableView()
-    private let settings = ["LQ", "SQ", "HQ", "SHQ", "HD 720"]
+    private let settings = ["360", "480", "HD 720"]
     private let cellID = "Cell"
     
     func setupView(selected setting: VideoSettings.VideoType) {
@@ -38,16 +38,12 @@ final class GCVideoSettingView: UIView {
         ])
         
         switch setting {
-        case .lq:
+        case .v360:
             tableView.selectRow(at: .init(row: 0, section: 0), animated: false, scrollPosition: .none)
-        case .sq:
+        case .v480:
             tableView.selectRow(at: .init(row: 1, section: 0), animated: false, scrollPosition: .none)
-        case .hq:
+        case .v720:
             tableView.selectRow(at: .init(row: 2, section: 0), animated: false, scrollPosition: .none)
-        case .shq:
-            tableView.selectRow(at: .init(row: 3, section: 0), animated: false, scrollPosition: .none)
-        case .hd720:
-            tableView.selectRow(at: .init(row: 4, section: 0), animated: false, scrollPosition: .none)
         }
     }
 }
@@ -65,11 +61,9 @@ extension GCVideoSettingView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: delegate?.settingDidChange(type: .lq, typeString: settings[0])
-        case 1: delegate?.settingDidChange(type: .sq, typeString: settings[1])
-        case 2: delegate?.settingDidChange(type: .hq, typeString: settings[2])
-        case 3: delegate?.settingDidChange(type: .shq, typeString: settings[3])
-        case 4: delegate?.settingDidChange(type: .hd720, typeString: settings[4])
+        case 0: delegate?.settingDidChange(type: .v360, typeString: settings[0])
+        case 1: delegate?.settingDidChange(type: .v480, typeString: settings[1])
+        case 2: delegate?.settingDidChange(type: .v720, typeString: settings[2])
         default: return
         }
     }

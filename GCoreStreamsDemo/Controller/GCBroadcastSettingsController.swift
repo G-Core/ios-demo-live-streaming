@@ -202,6 +202,8 @@ extension GCBroadcastSettingsController: UICollectionViewDataSource, UICollectio
         
         if let imageData = broadcast.posterImageData {
             cell.posterImageView.image = UIImage(data: imageData)
+        } else {
+            cell.posterImageView.image = nil
         }
         
         return cell

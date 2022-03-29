@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import AVFoundation
 
 protocol GCBroadcastDelegate: AnyObject {
     func posterLoaded(_ gcBroadcast: GCBroadcast)

@@ -5,8 +5,7 @@
 //  Created by Evgeniy Polyubin on 15.10.2021.
 //
 
-import UIKit
-import AVFoundation
+import Foundation
 
 enum HTTPError: Error {
     case absentAutorization, absentInternet, invalidUserOrPassword, serverDataIsLoading, unexpected

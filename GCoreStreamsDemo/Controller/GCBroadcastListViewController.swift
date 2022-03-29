@@ -213,7 +213,7 @@ extension GCBroadcastListViewController: GCBroadcastViewingCellDelegate, GCBroad
             model.broadcasts[index].isUnwrappedDescription = true
             cell.toggleDescriptionVisability(hiddenNow: true, withAnimation: true)
         }
-        
+        collectionVideo.reloadItems(at: [IndexPath(item: index, section: 0)])
     }
     
     func posterLoaded(_ gcBroadcats: GCBroadcast) {

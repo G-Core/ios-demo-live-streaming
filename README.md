@@ -1,4 +1,4 @@
-# GCoreStreamsDemo
+# G-Core Labs Demo – Stream Live Video Online on iOS
 
 # Introduction
 Set up live streaming in 15 minutes in your iOS project instead of 7 days of work and setting wild parameters of codecs, network, etc. This demo project is a quick tutorial how to stream live video from your own mobile app to an audience of 1 000 000+ viewers like Instagram, Youtube, etc.
@@ -12,6 +12,7 @@ Set up live streaming in 15 minutes in your iOS project instead of 7 days of wor
 
 4) Video: <br />
   Network adaptive bitrate mechanism <br />
+  Network adaptive resolution mechanism <br />
   Source: front and back cameras <br />
   Orientation: portrait <br />
   Codec: H.264 <br />
@@ -20,6 +21,7 @@ Set up live streaming in 15 minutes in your iOS project instead of 7 days of wor
 5) Audio: <br />
   Codec: AAC  <br />
   Configurable bitrate, sample rate <br />
+  Sending in the background <br />
  
 # Quick start 
   1) Launching the application via xcode (it must be run on a real device, since the simulator does not support the camera),
@@ -31,11 +33,14 @@ Set up live streaming in 15 minutes in your iOS project instead of 7 days of wor
 Clone this project and try it or create a new one.
 
 1) Library <br />
-  To work with rtmp, you will need a third-party library, [HaishinKit](https://github.com/shogo4405/HaishinKit.swift) is used in this project. You can install it on your project via SPM (swift package manager).
+  To work with rtmp, you will need a third-party library, [HaishinKit](https://github.com/shogo4405/HaishinKit.swift) is used in this project. You can install it on your project via SPM (swift package manager). <br />
+  This project contains its own version of the library, with added functionality for streaming in the background (sending audio, without video)
   
 2) Permissions <br />
   To use the camera and microphone, you need to request the user's permission for this. To do this, add to the plist (Info) of the project:
-  **Privacy - Camera Usage Description** and **Privacy - Microphone Usage Description**.
+  **Privacy - Camera Usage Description** and **Privacy - Microphone Usage Description**. <br />
+
+    Also, to record sound in the background, you need to add a **background mode** - **"Audio, AirPlay and Picture in Picture"**
   
 3) Audio session <br />
   Setting up an audio session for the application takes place in AppDelegate in the method:
@@ -113,8 +118,7 @@ Clone this project and try it or create a new one.
   4) The presence of a camera and microphone on the device.
   
 # License
-    Copyright 2022 G-Core Labs
-
+Copyright 2022 G-Core Labs
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -126,6 +130,7 @@ Clone this project and try it or create a new one.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
 # Screenshots
 
   <img src="https://user-images.githubusercontent.com/78258561/156187036-090ff38d-fb7a-4307-a500-4f809583538b.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/156187078-ec66eab6-fd4b-45fc-a89e-d4fe9245dcac.jpg" width="200">

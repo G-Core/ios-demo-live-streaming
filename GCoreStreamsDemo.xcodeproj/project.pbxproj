@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630DDE1D27E323BF002AF948 /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 630DDE1C27E323BF002AF948 /* HaishinKit */; };
+		630DDE1F27E33A3B002AF948 /* RTMPStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630DDE1E27E33A3B002AF948 /* RTMPStreamManager.swift */; };
 		6C0D8014274A82FA00A4E641 /* GCStreamSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D8013274A82FA00A4E641 /* GCStreamSettingsController.swift */; };
 		6C0D8016274A8B1800A4E641 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D8015274A8B1700A4E641 /* Extensions.swift */; };
 		6C0D8018274A928A00A4E641 /* GCSelectStreamTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D8017274A928A00A4E641 /* GCSelectStreamTextField.swift */; };
 		6C0D801B275163F600A4E641 /* VideoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D801A275163F600A4E641 /* VideoSettings.swift */; };
-		6C10E48127294BA400FB499C /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C10E48027294BA400FB499C /* HaishinKit */; };
 		6C10E4862729510400FB499C /* GCRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C10E4852729510400FB499C /* GCRecordViewController.swift */; };
 		6C3BF4B02719AFA800981C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3BF4AF2719AFA800981C2C /* AppDelegate.swift */; };
 		6C3BF4B42719AFA800981C2C /* GCAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3BF4B32719AFA800981C2C /* GCAccountViewController.swift */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630DDE1B27E323BA002AF948 /* HaishinKit.swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HaishinKit.swift; sourceTree = "<group>"; };
+		630DDE1E27E33A3B002AF948 /* RTMPStreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMPStreamManager.swift; sourceTree = "<group>"; };
 		6C0D8013274A82FA00A4E641 /* GCStreamSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCStreamSettingsController.swift; sourceTree = "<group>"; };
 		6C0D8015274A8B1700A4E641 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6C0D8017274A928A00A4E641 /* GCSelectStreamTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCSelectStreamTextField.swift; sourceTree = "<group>"; };
@@ -78,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C10E48127294BA400FB499C /* HaishinKit in Frameworks */,
+				630DDE1D27E323BF002AF948 /* HaishinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				6C0D801A275163F600A4E641 /* VideoSettings.swift */,
+				630DDE1E27E33A3B002AF948 /* RTMPStreamManager.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -187,6 +191,7 @@
 		6CEB3B6F27877DDC00576AEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				630DDE1B27E323BA002AF948 /* HaishinKit.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,7 +213,7 @@
 			);
 			name = GCoreStreamsDemo;
 			packageProductDependencies = (
-				6C10E48027294BA400FB499C /* HaishinKit */,
+				630DDE1C27E323BF002AF948 /* HaishinKit */,
 			);
 			productName = GCoreLabsDemoTwo;
 			productReference = 6C3BF4AC2719AFA800981C2C /* GCoreStreamsDemo.app */;
@@ -241,7 +246,6 @@
 			);
 			mainGroup = 6C3BF4A32719AFA800981C2C;
 			packageReferences = (
-				6C10E47F27294BA400FB499C /* XCRemoteSwiftPackageReference "HaishinKit" */,
 			);
 			productRefGroup = 6C3BF4AD2719AFA800981C2C /* Products */;
 			projectDirPath = "";
@@ -282,6 +286,7 @@
 				6CB38097276639AE000A171E /* GCBroadcastSettingsController.swift in Sources */,
 				6C3BF4D1271C4B7700981C2C /* HTTPCommunication.swift in Sources */,
 				6C3BF4D9271C6AF500981C2C /* GCShortDescriptionCellView.swift in Sources */,
+				630DDE1F27E33A3B002AF948 /* RTMPStreamManager.swift in Sources */,
 				6C3BF4DD271C785300981C2C /* GCPlayerViewController.swift in Sources */,
 				6C3BF4B02719AFA800981C2C /* AppDelegate.swift in Sources */,
 				6C0D801B275163F600A4E641 /* VideoSettings.swift in Sources */,
@@ -448,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H667QRM4K6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GCoreStreamsDemo/OtherFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H667QRM4K6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GCoreStreamsDemo/OtherFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,21 +510,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		6C10E47F27294BA400FB499C /* XCRemoteSwiftPackageReference "HaishinKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/shogo4405/HaishinKit.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		6C10E48027294BA400FB499C /* HaishinKit */ = {
+		630DDE1C27E323BF002AF948 /* HaishinKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6C10E47F27294BA400FB499C /* XCRemoteSwiftPackageReference "HaishinKit" */;
 			productName = HaishinKit;
 		};
 /* End XCSwiftPackageProductDependency section */

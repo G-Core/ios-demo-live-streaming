@@ -13,7 +13,7 @@ import VideoToolbox
 struct VideoSettings {
     
     enum VideoType: Int {
-        case lq, sq, hq, shq, hd720
+        case v360, v480, v720
     }
     
     let bitrate: Int
@@ -22,11 +22,9 @@ struct VideoSettings {
     
     static func getVideoResolution(type: VideoType) -> VideoSettings {
         switch type {
-        case .lq: return VideoSettings(bitrate: 280 * 1000, width: 480, height: 270)
-        case .sq: return VideoSettings(bitrate: 480 * 1000, width: 720, height: 405)
-        case .hq: return VideoSettings(bitrate: 950 * 1000, width: 720, height: 405)
-        case .shq: return VideoSettings(bitrate: 1500 * 1000, width: 720, height: 576)
-        case .hd720: return VideoSettings(bitrate: 2300 * 1000, width: 1280, height: 720)
+        case .v360: return VideoSettings(bitrate: 400_000, width: 640, height: 360)
+        case .v480: return VideoSettings(bitrate: 800_000, width: 854, height: 480)
+        case .v720: return VideoSettings(bitrate: 2_000_000, width: 1280, height: 720)
         }
     }
     
@@ -48,7 +46,7 @@ struct StreamSettings {
         stream.videoSettings = [
             .width: 1280,
             .height: 720,
-            .bitrate: 1_000_000,
+            .bitrate: 1_500_000,
             .profileLevel: kVTProfileLevel_H264_Baseline_5_2,
             .maxKeyFrameIntervalDuration: 2
         ]

@@ -133,6 +133,7 @@ extension GCAccountViewController {
 }
 
 //MARK: - UITextFieldDelegate
+
 extension GCAccountViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
@@ -146,6 +147,8 @@ extension GCAccountViewController: UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
 }
+
+//MARK: - NetworkManagerDelegate
 
 extension GCAccountViewController: NetworkManagerDelegate {
     func authorizationSuccess(userInfo: [String : String]) {
