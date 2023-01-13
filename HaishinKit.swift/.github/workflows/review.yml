@@ -1,0 +1,15 @@
+name: Review
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: bundle install
+      run: |
+        bundle install
+        bundle exec fastlane review
