@@ -1,7 +1,7 @@
 # Gcore – Stream Live Video Online on iOS
 
 ## Demo
-![](https://github.com/G-Core/ios-demo-live-streaming/blob/v2.0.0/gif/iOS_Live_demo_github.gif)
+<img src="/gif/iOS_Live_demo_github.gif" height="400"/>
 
 ## Introduction
 Set up live streaming in 15 minutes in your iOS project instead of 7 days of work and setting wild parameters of codecs, network, etc. This demo project is a quick tutorial how to stream live video from your own mobile app to an audience of 1 000 000+ viewers like Instagram, Youtube, etc.
