@@ -1,9 +1,12 @@
-# G-Core Labs Demo – Stream Live Video Online on iOS
+# Gcore – Stream Live Video Online on iOS
 
-# Introduction
+## Demo
+<img src="/gif/iOS_Live_demo_github.gif" height="800"/>
+
+## Introduction
 Set up live streaming in 15 minutes in your iOS project instead of 7 days of work and setting wild parameters of codecs, network, etc. This demo project is a quick tutorial how to stream live video from your own mobile app to an audience of 1 000 000+ viewers like Instagram, Youtube, etc.
 
-# Feature
+## Feature
 1) HLS & MPEG-DASH playback
 
 2) RTMP streaming
@@ -23,13 +26,13 @@ Set up live streaming in 15 minutes in your iOS project instead of 7 days of wor
   Configurable bitrate, sample rate <br />
   Sending in the background <br />
  
-# Quick start 
+## Quick start 
   1) Launching the application via xcode (it must be run on a real device, since the simulator does not support the camera),
   2) Authorization via email and password of the personal account in G-Core Labs,
   3) On the broadcast screen, you can start viewing available broadcasts,
   4) On the streams screen, you can start broadcasting, adjust the video quality, create/delete streams/broadcasts.
 
-# Setup of project
+## Setup of project
 Clone this project and try it or create a new one.
 
 1) Library <br />
@@ -95,30 +98,26 @@ Clone this project and try it or create a new one.
     }
     ```
 5) GCore API
-  To interact with the server, the **NetworkManager** structure is used, through the methods:
+  To interact with the server, the **HTTPCommunicator** structure is used, through the API:
   ```swift
-  func authorization(login: String, password: String)
-  func downloadAllStreams()
-  func downloadStreamWith(id: Int)
-  func deleteStream(streamID: Int)
-  func newStream(name: String)
-  func downloadHLS(for streamsID: [Int])
-  func downloadAllBroadcasts()
-  func downloadBroadcastWith(id: String)
-  func newBroadcast(name: String, streamID: Int)
-  func updateBroadcasts(broadcasts: [GCBroadcast]) 
+enum GcoreAPI: String {
+    case authorization = "https://api.gcorelabs.com/iam/auth/jwt/login"
+    case refreshToken = "https://api.gcorelabs.com/iam/auth/jwt/refresh"
+    case streams = "https://api.gcorelabs.com/streaming/streams"
+    case broadcasts = "https://api.gcorelabs.com/streaming/broadcasts"
+}
   ```
   Which create the necessary request through the **HTTPCommunication** class.
   For more check G-Core Labs API [documentation](https://apidocs.gcorelabs.com/streaming#tag/Streams).
   
-# Requirements
+## Requirements
   1) iOS min - 12.1,
   2) Real device (not simulator),
   3) The presence of an Internet connection on the device,
   4) The presence of a camera and microphone on the device.
   
-# License
-Copyright 2022 G-Core Labs
+## License
+Copyright 2022 Gcore
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -131,7 +130,3 @@ Copyright 2022 G-Core Labs
     See the License for the specific language governing permissions and
     limitations under the License.
 
-# Screenshots
-
-  <img src="https://user-images.githubusercontent.com/78258561/156187036-090ff38d-fb7a-4307-a500-4f809583538b.jpg" width="200"> <img src="https://user-images.githubusercontent.com/78258561/156187078-ec66eab6-fd4b-45fc-a89e-d4fe9245dcac.jpg" width="200">
-  <img src="https://user-images.githubusercontent.com/78258561/156187111-5b61af5b-2abd-41a2-b88a-cec1280aafa5.jpg" width="200">  <img src="https://user-images.githubusercontent.com/78258561/156187117-624d9fec-982f-4d5f-85e5-257271f491a6.jpg" width="200">
